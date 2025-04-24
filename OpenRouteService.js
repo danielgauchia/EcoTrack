@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 const apiKey = '5b3ce3597851110001cf624890104ad5d8c9453d90c93dcd210dc008'; // La clave API
-
-export const calculateRoute = async (start, end) => {
+//vehiculos: driving-car, cycling-regular, foot-walking
+export const calculateRoute = async (start, end, vehicle) => {
   try {
     const response = await axios.get(
-      `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${apiKey}&start=${start}&end=${end}`,
+      `https://api.openrouteservice.org/v2/directions/${vehicle}?api_key=${apiKey}&start=${start}&end=${end}`,
     );
     return response.data;
   } catch (error) {

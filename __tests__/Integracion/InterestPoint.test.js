@@ -1,6 +1,6 @@
-import InterestPoint from '../models/InterestPoint';
-import cloudServiceMock from '../__mocks__/cloudServiceMock';
-import InterestPointController from '../controllers/InterestPointController';
+import InterestPoint from '../../models/InterestPoint';
+import cloudServiceMock from '../../__mocks__/cloudServiceMock';
+import InterestPointController from '../../controllers/InterestPointController';
 
 const interestPointController = new InterestPointController(cloudServiceMock);
 

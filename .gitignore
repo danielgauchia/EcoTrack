@@ -64,3 +64,8 @@ yarn-error.log
 
 # testing
 /coverage
+
+#api keys
+apikey.properties
+.env
+/__mocks__/react-native-config.js

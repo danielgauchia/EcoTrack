@@ -7,6 +7,8 @@ const existingVehicle = {
   model: 'Corolla',
   year: 2020,
   averageConsumption: 5,
+  plate: '8171MSL',
+  type: 'gasoline'
 };
 const existingInterestPoint = {
   creator: 'usuario@gmail.com',
@@ -30,11 +32,7 @@ mockAddDoc.mockImplementation((collection, data) => {
   // Comprobamos si los datos del nuevo vehículo coinciden con el vehículo existente
   if (
     collection === 'vehicles' &&
-    data.creator === existingVehicle.creator &&
-    data.brand === existingVehicle.brand &&
-    data.model === existingVehicle.model &&
-    data.year === existingVehicle.year &&
-    data.averageConsumption === existingVehicle.averageConsumption
+    data.plate === existingVehicle.plate 
   ) {
     return Promise.reject(new Error('DuplicateVehicleException'));
   }

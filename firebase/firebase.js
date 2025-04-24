@@ -1,9 +1,8 @@
-import { initializeApp } from 'firebase/app';
+import {initializeApp} from 'firebase/app';
 import firebaseConfig from './config';
 import { getFirestore } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
-
 class Firebase {
   constructor() {
     if (!Firebase.instance) {
@@ -19,6 +18,5 @@ class Firebase {
 }
 
 const firebaseInstance = new Firebase();
-Object.freeze(firebaseInstance);
 
 export default firebaseInstance;
